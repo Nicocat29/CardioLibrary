@@ -8,19 +8,23 @@ namespace CardioLibrary
 {
     public class DataCardio
     {
-        public static void ValoriFrequenza(int battiticardiaci)
+        public static string ValoriFrequenza(int battiticardiaci)
         {
-            if (battiticardiaci<60)
+            if (battiticardiaci < 60 && battiticardiaci > 0)
             {
-                Console.WriteLine("Bradicardia");
+                return "Bradicardia";
             }
-            else if (battiticardiaci>=60 && battiticardiaci<=100)
+            else if (battiticardiaci >= 60 && battiticardiaci <= 100)
             {
-                Console.WriteLine("Normale");
+                return "Normale";
             }
-            else if (battiticardiaci>100)
+            else if (battiticardiaci > 100)
             {
-                Console.WriteLine("Tachicardia");
+                return "Tachicardia";
+            }
+            else
+            {
+                return "impossibile";
             }
            
         }
